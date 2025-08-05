@@ -1,12 +1,12 @@
 <?php
 
-    $capitals = array("Usa"=>"Washington", 
+    $capitals = array("Usa"=>"Waasdasdshington", 
                     "Japan"=>"Tokyo",
                     "SK"=>"Seoul");
 
     // echo $capitals["Usa"];
 
-    $capitals["Usa"] = "asdasd";
+    $capitals["Usa"] = "asdaasdasdassd";
     $capitals["asdasd"] = "123123";
 
     $keys = array_keys($capitals);
