@@ -1,7 +1,3 @@
-<?php
-    include("sqlconnection.php");
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
