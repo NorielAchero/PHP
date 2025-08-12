@@ -39,6 +39,7 @@
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
 
+
             $sql = "INSERT INTO users (username, password, firstname, lastname)
                     VALUES ('$username', '$password', '$firstname', '$lastname')";
             
@@ -47,6 +48,7 @@
             header("Location: index.php");
         }
     }
+    
 
 
 

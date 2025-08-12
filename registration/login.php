@@ -25,7 +25,7 @@
 <?php
     include("sqlconnection.php");
     session_start();
-    
+
     if(isset($_POST['login'])){
         if(empty($_POST['username']) || empty($_POST['password'])){
             echo "You need to complete everything. ";
@@ -34,6 +34,8 @@
 
             $username = $_POST['username'];
             $password = $_POST['password'];
+
+
 
             $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
             $stmt->bind_param("ss", $username, $password);
