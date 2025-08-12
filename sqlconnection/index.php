@@ -4,13 +4,31 @@
 
 include("database.php"); 
 
+// Insertion
+// $sql = "INSERT INTO users (user, password) 
+//         VALUES ('noriel', 'asdasd')";
 
-$sql = "INSERT INTO users (user, password) 
-        VALUES ('noriel', 'asdasd')";
 
+//     mysqli_query($conn, $sql);
+//     echo "User registered";
 
-    mysqli_query($conn, $sql);
-    echo "User registered";
+// Retrieve
+    $sql = "SELECT * FROM users";
+    $table = mysqli_query($conn, $sql);
+
+    if(mysqli_num_rows($table) > 0 ){
+        while($row = mysqli_fetch_assoc($table)){
+            echo $row["id"] . " ";
+            echo $row["user"] . " ";
+            echo $row["password"] . " ";
+            echo "<br>";
+        }
+
+    }
+    else{
+        echo "Not found";
+    }
+
 
     mysqli_close($conn);
 
@@ -24,6 +42,6 @@ $sql = "INSERT INTO users (user, password)
     <title>Document</title>
 </head>
 <body>
-    hello  <br>
+
 </body>
 </html>
