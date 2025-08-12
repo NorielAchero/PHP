@@ -11,15 +11,40 @@
     <title>Document</title>
 </head>
 <body>
-    This is the login page <br>
-    <a href= "home.php"> Home </a>
+    <form action = "index.php" method = "post">
+        <label> Username: </label><br>
+        <input type = "text" name = "username"><br>
+        <label> Password: </label><br>
+        <input type = "password" name = "password"><br><br>
+        
+        <input type = "submit" name = "login" value = "login" >
+
+    </form>
+
+
 </body>
 </html>
 <?php
 
-    $_SESSION["username"] = "orenji";
-    $_SESSION["password"] = "12345";
+    if(isset($_POST["login"])){
+        echo "haha";
+        if(!empty($_POST["username"]) && !empty($_POST["password"])){
+            $_SESSION["username"] = $_POST["username"];
+            $_SESSION["password"] = $_POST["password"];
 
-    echo "<br>" . $_SESSION['username'] ."<br> " .  $_SESSION['password'];
+            header("Location: home.php");
+        }
+        else{
+            echo "Something is missing!";
+        }
+
+    }
+    else{
+        echo "Please type in your credentials";
+    }
+
+
+
+    // echo "<br>" . $_SESSION['username'] ."<br> " .  $_SESSION['password'];
 
 ?>
