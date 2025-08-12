@@ -11,6 +11,15 @@
     <title>Document</title>
 </head>
 <body>
-    This is the login page
+    This is the login page <br>
+    <a href= "home.php"> Home </a>
 </body>
 </html>
+<?php
+
+    $_SESSION["username"] = "orenji";
+    $_SESSION["password"] = "12345";
+
+    echo "<br>" . $_SESSION['username'] ."<br> " .  $_SESSION['password'];
+
+?>
